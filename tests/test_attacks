@@ -1,0 +1,12 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import torch
+from ae.attacks import *
+from ae.load_mnist import load_mnist_data
+from ae.models import ResNet
+
+def softmax_prediction(network, features):
+    out = network(features)
+    return torch.argmax(out, dim=-1)
+
+def 
